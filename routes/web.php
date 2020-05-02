@@ -18,3 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/tm', 'StoreController@test')->name('connect.test');
+Route::get('/nmap', 'StoreController@nMap')->name('connect.nMap');
+
+Route::group(array('prefix' => 'api/v1'), function()
+{
+    Route::resource('ttt',  'TestApiController');
+});

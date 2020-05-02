@@ -3,11 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Laravel</title>
+        <title>간단한 지도 표시하기</title>
 
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ptby0nqyb1&callback=initMap"></script>
+        <script type="text/javascript" src="{{ asset('js/store.js') }}"></script>
 
         <!-- Styles -->
         <style>
@@ -23,7 +29,15 @@
         </style>
     </head>
     <body>
-        store html
+
+
+    <div id="map" style="width:100%;height:400px;"></div>
+<input type="button" id="getGPS" value="get">
+
+
+
+
+    store html
     @foreach ($users as $key => $user)
         <p>{{$key}} : {{$user->name}}</p>
     @endforeach
